@@ -1,0 +1,29 @@
+{
+  "name": "@joystream/api-examples",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "ts-node src/app.ts",
+    "start": "node lib/app.js",
+    "typeorm": "ts-node ./node_modules/typeorm/cli.js"
+  },
+  "dependencies": {
+    "@joystream/types": "^0.6.0",
+    "@polkadot/api": "^0.96.1",
+    "@polkadot/keyring": "^1.7.0-beta.5",
+    "@polkadot/types": "^0.96.1",
+    "@polkadot/util": "^1.7.0-beta.5",
+    "@polkadot/util-crypto": "^1.7.0-beta.5",
+    "@types/bn.js": "^4.11.5",
+    "bn.js": "^4.11.8",
+    "dotenv": "^8.2.0",
+    "pg": "^8.0.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.24"
+  },
+  "devDependencies": {
+    "@polkadot/ts": "^0.1.56",
+    "typescript": "^3.7.2"
+  }
+}
