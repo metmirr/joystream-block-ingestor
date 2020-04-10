@@ -1,3 +1,7 @@
+## How it works
+
+![Flow diagram](images/Flow.png)
+
 Generate models from warthog generated database:
 
 ```shell
