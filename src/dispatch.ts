@@ -6,19 +6,17 @@ import { MemberRegisteredEvent } from "./member";
 import { mapParamsToProps } from "./helper";
 
 export async function dispatch(event: Event) {
-  const { section, method, data, typeDef } = event;
+  const { method, data, typeDef } = event;
 
-  if (section === "members") {
-    switch (method) {
-      case MEMBERREGISTERED:
-        const eventClass = new MemberRegisteredEvent();
-        mapParamsToProps(data, typeDef, eventClass);
+  switch (method) {
+    case MEMBERREGISTERED:
+      const eventClass = new MemberRegisteredEvent();
+      mapParamsToProps(data, typeDef, eventClass);
 
-        handleMemberRegistered(eventClass);
-        break;
+      handleMemberRegistered(eventClass);
+      break;
 
-      default:
-        break;
-    }
+    default:
+      break;
   }
 }

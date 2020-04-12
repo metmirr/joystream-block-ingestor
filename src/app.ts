@@ -26,7 +26,9 @@ async function main() {
     events.forEach((record: EventRecord) => {
       // extract the phase, event and the event types
       const { event, phase } = record;
-      dispatch(event);
+      if (event.section === "members") {
+        dispatch(event);
+      }
     });
   });
 
